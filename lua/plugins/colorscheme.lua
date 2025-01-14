@@ -7,11 +7,11 @@ return {
         colors = {
             -- Set up custom colors using 'deep' as preset
             black = "#0c0e15",
-            bg0 = "#090d12",
+            bg0 = "#090d14",
             bg1 = "#131621",
             bg2 = "#283347",
             bg3 = "#2a324a",
-            bg_d = "#090B0F",
+            bg_d = "#070B10",
             bg_blue = "#54b0fd",
             bg_yellow = "#f2cc81",
             fg = "#93a4c3",
