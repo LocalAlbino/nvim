@@ -6,7 +6,7 @@ require("config.keymaps")
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.relativenumber = true
-vim.api.nowrap = true
+vim.cmd("set nowrap")
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking text.",
 	callback = function()

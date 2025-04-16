@@ -1,6 +1,9 @@
 -- Set keymaps for common functions --
 
 
+-- Common function keymaps
+vim.keymap.set("n", "<leader>h", ":noh<enter>")
+
 -- Neotree specific keymaps
 vim.keymap.set("n", "<leader>e", function()
 	vim.cmd("Neotree toggle")
@@ -23,5 +26,10 @@ vim.keymap.set("n", "<leader>fh", function()
 	require("telescope.builtin").help_tags()
 end)
 
--- LSP Specific keymaps
+-- LSP specific keymaps
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true })
+
+-- Snacks terminal keymaps
+vim.keymap.set("n", "<leader>t", function()
+	Snacks.terminal.toggle()
+end)
