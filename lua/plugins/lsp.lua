@@ -19,6 +19,7 @@ return {
 			lsp.lua_ls.setup {}
 			lsp.ts_ls.setup {}
 			lsp.gdscript.setup {}
+			lsp.clangd.setup {}
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
