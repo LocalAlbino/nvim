@@ -7,6 +7,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.relativenumber = true
 vim.cmd("set nowrap")
+vim.schedule(function()
+	vim.opt.clipboard = 'unnamedplus'
+end)
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking text.",
 	callback = function()

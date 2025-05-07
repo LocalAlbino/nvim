@@ -18,6 +18,7 @@ return {
 			-- Set up servers
 			lsp.lua_ls.setup {}
 			lsp.ts_ls.setup {}
+			lsp.pyright.setup {}
 			lsp.gdscript.setup {}
 			lsp.clangd.setup {}
 
