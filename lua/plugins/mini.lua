@@ -11,5 +11,7 @@ return {
 		require('mini.statusline').setup()
 		-- Indent scope
 		require('mini.indentscope').setup()
+		-- Minimal git integration
+		require('mini.diff').setup()
 	end
 }

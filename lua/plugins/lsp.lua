@@ -21,6 +21,12 @@ return {
 			lsp.pyright.setup {}
 			lsp.gdscript.setup {}
 			lsp.clangd.setup {}
+			lsp.cssls.setup {
+				capabilities = require('cmp_nvim_lsp').default_capabilities()
+			}
+			lsp.html.setup {
+				capabilities = require('cmp_nvim_lsp').default_capabilities()
+			}
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
