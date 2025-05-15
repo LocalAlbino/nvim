@@ -27,10 +27,7 @@ vim.keymap.set("n", "<leader>fh", function()
 end)
 
 -- Documentation comment keymaps (neogen)
-vim.keymap.set('n', '<leader>df', ":lua require('neogen').generate({type='func'})<CR>")
-vim.keymap.set('n', '<leader>dc', ":lua require('neogen').generate({type='class'})<CR>")
-vim.keymap.set('n', '<leader>dt', ":lua require('neogen').generate({type='type'})<CR>")
-vim.keymap.set('n', '<leader>db', ":lua require('neogen').generate({type='file'})<CR>")
+vim.keymap.set('n', '<leader>dc', ":Neogen<CR>")
 
 -- Split window creation, resizing, and movement keymaps
 vim.keymap.set('n', '<leader>vs', '<C-w>v')
