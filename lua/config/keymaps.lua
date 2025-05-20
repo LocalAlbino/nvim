@@ -41,6 +41,11 @@ vim.keymap.set('n', '<M-.>', ':vertical resize -2<CR>')
 vim.keymap.set('n', '<M-t>', ':resize +2<CR>')
 vim.keymap.set('n', '<M-s>', ':resize -2<CR>')
 
+-- Terminal
+vim.keymap.set("n", "<leader>t", function()
+	vim.cmd("botright split | terminal")
+end, { desc = "Open terminal at the bottom" })
+vim.keymap.set("t", "<leader>q", "<C-\\><C-n>:q<CR>", { desc = "Close terminal" })
 -- LSP specific keymaps
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>sd', function()
