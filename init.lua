@@ -8,6 +8,19 @@ require("config.keymaps")
 vim.opt.inccommand = 'split'
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+vim.o.updatetime = 300
+
+-- LSP diagnostic config
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	float = {
+		border = "rounded",
+		source = true
+	}
+})
 
 -- Terminal stuff
 vim.env.COLORTERM = "truecolor"
@@ -30,4 +43,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank()
 	end,
+})
+
+-- LSP Hover to show diagnostic
+vim.api.nvim_create_autocmd("CursorHold", {
+	callback = function()
+		vim.diagnostic.open_float(nil, { focusable = false })
+	end
 })
