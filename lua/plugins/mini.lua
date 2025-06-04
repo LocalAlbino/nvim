@@ -7,8 +7,6 @@ return {
 		require('mini.surround').setup()
 		-- LSP Completion
 		require('mini.completion').setup()
-		-- Statusline
-		require('mini.statusline').setup()
 		-- Indent scope
 		require('mini.indentscope').setup()
 		-- Minimal git integration

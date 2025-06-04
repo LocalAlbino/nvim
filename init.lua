@@ -3,6 +3,7 @@ require("config.lazy")
 require("config.keymaps")
 
 -- Set some options --
+vim.o.cmdheight = 0
 
 -- Searching and inserting
 vim.opt.inccommand = 'split'
@@ -23,6 +24,7 @@ vim.diagnostic.config({
 })
 
 -- Terminal stuff
+vim.o.shell = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
 vim.env.COLORTERM = "truecolor"
 vim.opt.termguicolors = true
 
