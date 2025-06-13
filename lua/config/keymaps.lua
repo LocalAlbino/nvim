@@ -77,3 +77,8 @@ end
 
 vim.keymap.set("n", "<C-\\>", toggle_terminal, { noremap = true, silent = true })
 vim.keymap.set("t", "<C-\\>", [[<C-\><C-n>]], { noremap = true, silent = true })
+
+-- LSP Specific Keymaps
+vim.keymap.set("n", '<grn>', function()
+	vim.lsp.buf.rename()
+end)
