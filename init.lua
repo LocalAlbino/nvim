@@ -31,6 +31,7 @@ vim.opt.termguicolors = true
 -- Tabs and spacing
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.cmd("set nowrap")
 
