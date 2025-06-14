@@ -82,3 +82,10 @@ vim.keymap.set("t", "<C-\\>", [[<C-\><C-n>]], { noremap = true, silent = true })
 vim.keymap.set("n", '<grn>', function()
 	vim.lsp.buf.rename()
 end)
+vim.keymap.set("n", '<leader>ca', function()
+	require("telescope.builtin").lsp_code_actions()
+end)
+
+-- Supermaven specific keymaps
+vim.keymap.set('n', '<leader>smw', ':SupermavenStart<CR>')
+vim.keymap.set('n', '<leader>smq', ':SupermavenStop<CR>')
