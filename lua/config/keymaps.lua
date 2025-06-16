@@ -83,7 +83,7 @@ vim.keymap.set("n", '<grn>', function()
 	vim.lsp.buf.rename()
 end)
 vim.keymap.set("n", '<leader>ca', function()
-	require("telescope.builtin").lsp_code_actions()
+	vim.lsp.buf.code_action()
 end)
 
 -- Supermaven specific keymaps
