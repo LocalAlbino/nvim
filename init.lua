@@ -36,18 +36,19 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.cmd("set nowrap")
 
--- Sync nvim and os clipboards
-vim.schedule(function()
-	vim.opt.clipboard = 'unnamedplus'
-end)
-
 -- Highlight when yanking text.
+-- also system clipboard yank/paste
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking text.",
 	callback = function()
 		vim.highlight.on_yank()
 	end,
 })
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+Y')
+vim.keymap.set("n", "<leader>yy", '"+yy')
+vim.keymap.set('n', '<leader>p', '"+p')
+vim.keymap.set('n', '<leader>P', '"+P')
 
 -- LSP Hover to show diagnostic
 vim.api.nvim_create_autocmd("CursorHold", {

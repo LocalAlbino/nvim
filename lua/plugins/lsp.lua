@@ -12,7 +12,9 @@ return {
 			lsp.ts_ls.setup {}
 			lsp.pyright.setup {}
 			lsp.gdscript.setup {}
-			lsp.clangd.setup {}
+			lsp.clangd.setup {
+				cmd = { "clangd", "--log=verbose" },
+			}
 			lsp.gopls.setup {}
 			lsp.tailwindcss.setup {}
 			lsp.cssls.setup {
