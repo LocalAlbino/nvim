@@ -61,6 +61,11 @@ return {
         b = { bg = colors.bg0, fg = colors.fg },
         c = { bg = colors.bg1, fg = colors.fg }
       },
+      terminal = {
+        a = { bg = colors.bg_d, fg = colors.cyan },
+        b = { bg = colors.bg0, fg = colors.fg },
+        c = { bg = colors.bg1, fg = colors.fg }
+      },
     }
     require('lualine').setup {
       options = { theme = onedark_stealth }
