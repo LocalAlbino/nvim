@@ -4,38 +4,51 @@ return {
     opts = {
       style = "deep",
       colors = {
-        black = "#0a0c12",
-        bg0 = "#090A12",
-        bg1 = "#131321",
-        bg2 = "#283047",
-        bg3 = "#2a364a",
-        bg_d = "#07080F",
-        bg_blue = "#54b0fd",
-        bg_yellow = "#f2cc81",
-        fg = "#93a4c3",
-        purple = "#c75ae8",
-        green = "#8bcd5b",
-        orange = "#dd9046",
-        blue = "#41a7fc",
-        yellow = "#efbd5d",
-        cyan = "#34bfd0",
-        red = "#f65866",
-        grey = "#455574",
-        light_grey = "#6c7d9c",
-        dark_cyan = "#1b6a73",
-        dark_red = "#992525",
-        dark_yellow = "#8f610d",
-        dark_purple = "#862aa1",
-        diff_add = "#27341c",
-        diff_delete = "#331c1e",
-        diff_change = "#102b40",
-        diff_text = "#1c4a6e",
-      }
+        -- Absolute black background
+        black = "#000000",
+        bg0 = "#000000",
+        bg1 = "#050505",
+        bg2 = "#0b0b0b",
+        bg3 = "#121212",
+        bg_d = "#000000",
+
+        -- Foreground (soft gray, not white)
+        fg = "#b0b0b0",
+
+        -- Gray accents (very important)
+        grey = "#5c5c5c",
+        light_grey = "#8a8a8a",
+
+        -- Muted colors (kept subtle)
+        red = "#c66b6b",
+        green = "#8fbf7f",
+        yellow = "#c8b26a",
+        blue = "#7aa2c7",
+        purple = "#9a7ecc",
+        cyan = "#6fbfbf",
+        orange = "#c0906b",
+
+        -- Dark variants
+        dark_red = "#7a3f3f",
+        dark_yellow = "#7a6a3f",
+        dark_purple = "#5f3f7a",
+        dark_cyan = "#3f6f6f",
+
+        -- UI highlights
+        bg_blue = "#1a2633",
+        bg_yellow = "#2a2414",
+
+        -- Diff colors (subtle, gray-forward)
+        diff_add = "#1a2a1a",
+        diff_delete = "#2a1a1a",
+        diff_change = "#1a232a",
+        diff_text = "#2a3a4a",
+      },
     },
     config = function(_, opts)
       local onedark = require("onedark")
       onedark.setup(opts)
       onedark.load()
-    end
-  }
+    end,
+  },
 }
