@@ -2,30 +2,30 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
+    -- Ayu Dark palette (official-ish)
     local colors = {
       -- Backgrounds
-      black = "#000000",
-      bg0 = "#000000",
-      bg1 = "#050505",
-      bg2 = "#0b0b0b",
-      bg_d = "#000000",
+      bg0 = "#0A0E14", -- editor background
+      bg1 = "#0F1419", -- statusline / panels
+      bg2 = "#131721",
+      bg_d = "#0A0E14",
 
       -- Foregrounds
-      fg = "#b0b0b0",
-      grey = "#5c5c5c",
-      light_grey = "#8a8a8a",
+      fg = "#B3B1AD",
+      grey = "#5C6773",
+      light_grey = "#737D87",
 
-      -- Muted accent colors (match onedark tweaks)
-      red = "#c66b6b",
-      green = "#8fbf7f",
-      yellow = "#c8b26a",
-      blue = "#7aa2c7",
-      purple = "#9a7ecc",
-      cyan = "#6fbfbf",
-      orange = "#c0906b",
+      -- Accents (Ayu core colors)
+      red = "#F07178",
+      green = "#C2D94C",
+      yellow = "#FFB454",
+      blue = "#59C2FF",
+      purple = "#D2A6FF",
+      cyan = "#95E6CB",
+      orange = "#FF8F40",
     }
 
-    local stealth = {
+    local ayu = {
       normal = {
         a = { bg = colors.bg_d, fg = colors.green },
         b = { bg = colors.bg0, fg = colors.grey },
@@ -65,7 +65,7 @@ return {
 
     require("lualine").setup({
       options = {
-        theme = stealth,
+        theme = ayu,
         section_separators = "",
         component_separators = "",
         globalstatus = true,
