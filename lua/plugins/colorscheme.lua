@@ -1,14 +1,9 @@
 return {
-  "nickkadutskyi/jb.nvim",
+  "Mofiqul/vscode.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
   config = function()
-    -- require("jb").setup({transparent = true})
-    vim.cmd("colorscheme jb")
-    local yellow = "#ffc66d"
-    for _, group in ipairs({ "@type", "@lsp.type.class", "@lsp.type.struct" }) do
-      vim.api.nvim_set_hl(0, group, { fg = yellow })
-    end
+    vim.cmd("colorscheme vscode")
   end,
 }
